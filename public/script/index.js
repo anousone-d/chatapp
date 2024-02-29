@@ -29,3 +29,27 @@ btn_logout.addEventListener("click", async function () {
     console.log(error);
   }
 });
+
+/////////////////////////////////////////////////////////////////////////////
+const userAvatar = document.getElementById("user_avatar");
+const usersContainer = document.getElementById("users_container");
+
+window.addEventListener("load", async () => {
+  try {
+    const res = await fetch("http://localhost:3000/api/users/get-current-user");
+    const { user } = await res.json();
+
+    userAvatar.src = user.profilePic;
+
+    //get user's friends
+    const friendsDataRes = await fetch(
+      "http://localhost:3000/api/users/get-user-friends"
+    );
+    const friendsData = await friendsDataRes.json();
+
+    //render list of user's friends
+    console.log(friendsData);
+  } catch (error) {
+    console.log(error);
+  }
+});

@@ -6,9 +6,9 @@ import { fileURLToPath } from "url";
 import mysql from "mysql";
 import cookieParser from "cookie-parser";
 
-import authRoute from "./routes/auth.route.js";
 import { checkAuth } from "./controllers/auth.controller.js";
-import { readdir } from "fs";
+import authRoute from "./routes/auth.route.js";
+import userRoute from "./routes/user.route.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,6 +23,7 @@ app.use(express.static(path.join(currentDir, "public")));
 app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
 
 app.get("/", checkAuth, (req, res) => {
   const htmlFilePath = path.join(currentDir, "public", "html", "chat.html");
@@ -30,9 +31,9 @@ app.get("/", checkAuth, (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  const isLoggedIn = req.cookies["jwt"];
+  const isAuthenticated = req.cookies["jwt"];
 
-  if (isLoggedIn) {
+  if (isAuthenticated) {
     return res.redirect("http://localhost:3000/chat");
   }
 
@@ -41,9 +42,9 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  const isLoggedIn = req.cookies["jwt"];
+  const isAuthenticated = req.cookies["jwt"];
 
-  if (isLoggedIn) {
+  if (isAuthenticated) {
     return res.redirect("http://localhost:3000/chat");
   }
 
@@ -59,8 +60,8 @@ app.get("/chat", checkAuth, (req, res) => {
 
 export const conn = mysql.createConnection({
   host: "localhost",
-  user: "happy",
-  password: "happy",
+  user: "chatapp",
+  password: "chatapp",
   database: "chatapp",
 });
 

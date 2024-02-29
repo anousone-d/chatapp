@@ -21,6 +21,10 @@ formEl.addEventListener("submit", async function (e) {
 
     const data = await res.json();
 
+    if (data.error) {
+      alert(data.error);
+    }
+
     window.location.href = "http://localhost:3000/chat";
   } catch (error) {
     console.log(error);

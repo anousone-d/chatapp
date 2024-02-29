@@ -59,12 +59,18 @@ export function login(req, res) {
   let user;
 
   conn.query(sql, values, (err, result) => {
+    if (result.length === 0) {
+      return res.status(400).json({ error: "incorrect email or password" });
+    }
+
     user = result[0];
 
-    const isPasswordCorrect = bcrypt.compare(password, user.password);
+    const isPasswordCorrect = bcrypt.compareSync(password, user.password);
+
+    console.log(isPasswordCorrect);
 
     if (!isPasswordCorrect) {
-      return res.status(400).json({ error: "email or password incorrect" });
+      return res.status(400).json({ error: "incorrect email or password" });
     }
 
     user.password = undefined;
