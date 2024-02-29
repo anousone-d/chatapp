@@ -9,6 +9,7 @@ import cookieParser from "cookie-parser";
 import { checkAuth } from "./controllers/auth.controller.js";
 import authRoute from "./routes/auth.route.js";
 import userRoute from "./routes/user.route.js";
+import messageRoute from "./routes/message.route.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,6 +25,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/messages", messageRoute);
 
 app.get("/", checkAuth, (req, res) => {
   const htmlFilePath = path.join(currentDir, "public", "html", "chat.html");
