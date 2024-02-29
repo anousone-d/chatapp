@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAT APP</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-zinc-800 text-zinc-50 font-poppin w-full h-screen flex">
+    <aside class="w-full h-full flex flex-col justify-between border border-r-zinc-600 border-y-0 border-l-0 lg:w-[30%] md:px-8 lg:flex left_container">
+      <header class="flex flex-col items-center justify-between gap-2 border border-b-zinc-600 border-x-0 border-t-0 px-2 py-2">
+        <div class="w-full flex items-center justify-between">
+          <div id="btn_logout" class='cursor-pointer'><svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15" stroke="#f1f5f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.3531 21.8897 19.1752 21.9862 17 21.9983M9.00195 17C9.01406 19.175 9.11051 20.3529 9.87889 21.1213C10.5202 21.7626 11.4467 21.9359 13 21.9827" stroke="#f1f5f9" stroke-width="1.5" stroke-linecap="round"></path> </g></svg></div>
+          <p>Chats</p>
+          <div>
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="h-[2rem] w-[2rem]"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 12h4m-2 2v-4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1c0 .6-.4 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="w-full relative">
+          <input type="text" placeholder="Search chats" class="w-full bg-zinc-600 rounded-full outline-none px-2 py-1 text-center"/>
+
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="w-[1.5rem] h-[1.5rem] absolute top-[5px] left-[5px]"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        </div>
+      </header>
+
+      <section class="w-full flex flex-1 flex-col gap-10 px-2 py-4">
+        <!-- REPRESENT EACH USER -->
+        <div class="flex justify-between hover:bg-zinc-600 hover:rounded-lg transition-all duration-300 cursor-pointer toggleBtn">
+          <div class="flex items-center gap-4">
+            <img
+            src="https://scontent.fbkk3-2.fna.fbcdn.net/v/t39.30808-1/327959976_1609278582920927_8778244280982277674_n.jpg?stp=dst-jpg_p240x240&_nc_cat=104&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeHeMSxC0h3pGC1XbeRKEtjYmqdCTyPDP9Kap0JPI8M_0m_ymcX9or6OC0ZhFPY5rOTL2JKV0_eUrgv_Fx1VNdim&_nc_ohc=Q3M8tKZyLqUAX_PAmu3&_nc_ht=scontent.fbkk3-2.fna&oh=00_AfCBstJYdzG0MnSVuGshihUKCRaMJ8d3K9nOo3TEYxam3g&oe=65D26FED"
+            alt="" 
+            class="rounded-full w-[4rem] h-[4rem]"/>
+          
+            <div class="flex flex-col items-start justify-between gap-3">
+              <p>MM</p>
+              <p class="text-zinc-500">อะเคค่าาา</p>
+              
+            </div>
+          </div>
+
+          <div class="self-end">
+            <p class="text-zinc-500">2m</p>
+          </div>
+        </div>
+
+        <!-- REPRESENT EACH USER -->
+        <div class="flex justify-between hover:bg-zinc-600 hover:rounded-lg transition-all duration-300 cursor-pointer">
+          <div class="flex items-center gap-4 ">
+            <img
+            src="https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.15752-9/426978253_1172851040790482_7960291273030285800_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGnB8Eb9pDxjcKSg5bWViPx45Nf7rPtxF3jk1_us-3EXVikKmy3XPGtDuAnhqm9s65HYoSHBzg8yrgCLG4bN2kK&_nc_ohc=4D11B9vdnxsAX_yEBGU&_nc_oc=AQnzGHrgQm8epsdqlisLZ7sKCFV2s4YsZYpl2FFp5UBeQ0boc3eAO7z02ARB_bEPPoQ&_nc_ht=scontent.fbkk5-8.fna&oh=03_AdRcQjKTKny4z7IbCBOAwgwB6kweLca2H3Ej16_4pOlr2w&oe=65F438D3"
+            alt="" class="rounded-full w-[4rem] h-[4rem]"/>
+            <div class="flex flex-col items-start justify-between gap-3">
+              <p>IceIce</p>
+              <p class="text-zinc-500">you: Okayyy!</p>
+            </div>
+          </div>
+
+          <div class="self-end">
+            <p class="text-zinc-500">20m</p>
+          </div>
+        </div>
+
+        <!-- REPRESENT EACH USER -->
+        <div class="flex justify-between hover:bg-zinc-600 hover:rounded-lg transition-all duration-300 cursor-pointer">
+          <div class="flex items-center gap-4">
+            <img
+            src="https://scontent.fbkk4-5.fna.fbcdn.net/v/t39.30808-6/293114925_1477118032724214_4454307798667806918_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeElqc-6sDNAY4Sfh6xFnAmkyS0BH9RVY8DJLQEf1FVjwFk-uEvWkTm_yvc8sBqOPxvN4N3uFl585ixMtCX001-E&_nc_ohc=mQRjtCIE-5IAX842GaS&_nc_zt=23&_nc_ht=scontent.fbkk4-5.fna&oh=00_AfBea-KTceYRlzydm1J8xrp777DqruW9mhClKdIQzrCJug&oe=65D151B8"
+            alt="" class="rounded-full w-[4rem] h-[4rem]"/>
+            <div class="flex flex-col items-start justify-between gap-3">
+              <p>MildMild</p>
+              <p class="text-zinc-500">gogo โบร๋!</p>
+            </div>
+          </div>
+
+          <div class="self-end">
+            <p class="text-zinc-500">1h</p>
+          </div>
+        </div>
+
+        <!-- REPRESENT EACH USER -->
+        <div class="flex justify-between hover:bg-zinc-600 hover:rounded-lg transition-all duration-300 cursor-pointer">
+          <div class="flex items-center gap-4">
+            <img
+            src="https://scontent.fbkk3-6.fna.fbcdn.net/v/t39.30808-6/412775043_18372045910075861_5278086273252360625_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeF3aebzzrlTw0skwoq4ylKypRwX_-5ZU0SlHBf_7llTROkmFg2qC6iIsDQASQVq42TG1CEUPWCBuonS3Pq9XtHH&_nc_ohc=rqYVUK7O0UEAX-xvqxw&_nc_zt=23&_nc_ht=scontent.fbkk3-6.fna&oh=00_AfBUjQY0ZKu9-jyo8Oxd4AkmooTHf4YXsY8LMAI8tMUPbQ&oe=65D24538"
+            alt="" class="rounded-full w-[4rem] h-[4rem]" />
+            <div class="flex flex-col items-start justify-between gap-3">
+              <p>MayMay</p>
+              <p class="text-zinc-500">you: เมย์ๆทำไรอยู่ๆๆ</p>
+            </div>
+          </div>
+
+          <div class="self-end">
+            <p class="text-zinc-500">2d</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="w-full flex items-center justify-between py-2 px-2 border border-t-zinc-600 border-x-0 border-b-0">
+        <div class="flex items-center gap-4">
+          <img
+            src="https://scontent.fbkk3-5.fna.fbcdn.net/v/t1.6435-9/101522364_2739660353023866_2239693340259909632_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd63ad&_nc_eui2=AeHeJEkI4ZoEVI3Qp956uVz5YIh_BTTC-E5giH8FNML4TowIYI0CAl_48YLxIAYX1CRXMjHv8MeUfXeOb6rd6n9B&_nc_ohc=DawC807x1NQAX__PcQB&_nc_ht=scontent.fbkk3-5.fna&oh=00_AfBRgx6nrKVneWLsb8oNgMASP9oP8jc1MKp4GRgJmH7Zxw&oe=65F3F792"
+            alt="profile picture"
+            class="rounded-full w-[4rem] h-[4rem] cursor-pointer"
+          />
+          <p>Happy</p>
+        </div>
+        <div class="cursor-pointer">
+          <svg   width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>profile [#1336]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-380.000000, -2159.000000)" fill="#f4f4f5"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M334,2011 C337.785,2011 340.958,2013.214 341.784,2017 L326.216,2017 C327.042,2013.214 330.215,2011 334,2011 M330,2005 C330,2002.794 331.794,2001 334,2001 C336.206,2001 338,2002.794 338,2005 C338,2007.206 336.206,2009 334,2009 C331.794,2009 330,2007.206 330,2005 M337.758,2009.673 C339.124,2008.574 340,2006.89 340,2005 C340,2001.686 337.314,1999 334,1999 C330.686,1999 328,2001.686 328,2005 C328,2006.89 328.876,2008.574 330.242,2009.673 C326.583,2011.048 324,2014.445 324,2019 L344,2019 C344,2014.445 341.417,2011.048 337.758,2009.673" id="profile-[#1336]"> </path> </g> </g> </g> </g></svg>
+        </div>
+      </footer>
+    </aside>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////// -->
+
+    <main class="w-full h-full flex-col hidden  lg:flex md:px-8 md:py-4 right_container">
+      <header class="w-full flex items-center justify-between px-2 py-2 border border-b-zinc-600 border-x-0 border-t-0"> 
+        <div class="flex items-center gap-6">
+          <div class="cursor-pointer lg:hidden backBtn">
+            <svg width="40px" height="40px"  viewBox="0 0 1024 1024" fill="#ffffff" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M669.6 849.6c8.8 8 22.4 7.2 30.4-1.6s7.2-22.4-1.6-30.4l-309.6-280c-8-7.2-8-17.6 0-24.8l309.6-270.4c8.8-8 9.6-21.6 2.4-30.4-8-8.8-21.6-9.6-30.4-2.4L360.8 480.8c-27.2 24-28 64-0.8 88.8l309.6 280z" fill=""></path></g></svg>
+          </div>
+          <img
+          src="https://scontent.fbkk3-2.fna.fbcdn.net/v/t39.30808-1/327959976_1609278582920927_8778244280982277674_n.jpg?stp=dst-jpg_p240x240&_nc_cat=104&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeHeMSxC0h3pGC1XbeRKEtjYmqdCTyPDP9Kap0JPI8M_0m_ymcX9or6OC0ZhFPY5rOTL2JKV0_eUrgv_Fx1VNdim&_nc_ohc=Q3M8tKZyLqUAX_PAmu3&_nc_ht=scontent.fbkk3-2.fna&oh=00_AfCBstJYdzG0MnSVuGshihUKCRaMJ8d3K9nOo3TEYxam3g&oe=65D26FED"
+          alt="" 
+          class="w-[4rem] h-[4rem] rounded-full" />
+          <p>MM</p>
+        </div>
+
+        <div>
+          <svg
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            class="h-[2rem] w-[2rem] cursor-pointer"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="#f4f4f5"
+                fill-rule="evenodd"
+                d="M3 8a2 2 0 100 4 2 2 0 000-4zm5 2a2 2 0 114 0 2 2 0 01-4 0zm7 0a2 2 0 114 0 2 2 0 01-4 0z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </header>
+
+      <div class="flex flex-col flex-1 w-full h-[575px] justify-center px-2 py-2">
+        <div class="text-center">
+          <p class="text-zinc-500">16:30</p>
+        </div>
+
+        <div class="flex flex-col justify-end gap-12">
+          <div class="self-end">
+            <span class="bg-zinc-400 px-4 py-2 rounded-full">เข้าตลาดมั้ยเอ็มๆ</span>
+          </div>
+          <div>
+            <span class="bg-zinc-600 px-4 py-2 rounded-full">เข้า กีโมง</span>
+          </div>
+          <div class="self-end">
+            <span class="bg-zinc-400 px-4 py-2 rounded-full">17:30 มั้ย</span>
+          </div>
+          <div class="">
+            <span class="bg-zinc-600 px-4 py-2 rounded-full">อะเคค่าาา</span>
+          </div>
+
+          <!-- IF USER ARE TYPING -->
+          <div class="flex items-center gap-4">
+            <img
+          src="https://scontent.fbkk3-2.fna.fbcdn.net/v/t39.30808-1/327959976_1609278582920927_8778244280982277674_n.jpg?stp=dst-jpg_p240x240&_nc_cat=104&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeHeMSxC0h3pGC1XbeRKEtjYmqdCTyPDP9Kap0JPI8M_0m_ymcX9or6OC0ZhFPY5rOTL2JKV0_eUrgv_Fx1VNdim&_nc_ohc=Q3M8tKZyLqUAX_PAmu3&_nc_ht=scontent.fbkk3-2.fna&oh=00_AfCBstJYdzG0MnSVuGshihUKCRaMJ8d3K9nOo3TEYxam3g&oe=65D26FED"
+          alt="" 
+          class="w-[2rem] h-[2rem] rounded-full" />
+            <svg
+              class="w-[3rem] h-[2rem] bg-zinc-600 px-4 py-2 rounded-full"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill="#f4f4f5"
+                  fill-rule="evenodd"
+                  d="M3 8a2 2 0 100 4 2 2 0 000-4zm5 2a2 2 0 114 0 2 2 0 01-4 0zm7 0a2 2 0 114 0 2 2 0 01-4 0z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <footer class="flex items-center justify-between gap-2 px-2 py-2 border border-t-zinc-600 border-x-0 border-b-0">
+        <div class="flex items-center justify-between gap-2">
+          <div class="w-[2rem] h-[2rem] cursor-pointer">
+            <img src="../icons/plus.svg" alt="" />
+          </div>
+          <div class="w-[2rem] h-[2rem] cursor-pointer">
+            <img src="../icons/image.svg" alt="" />
+          </div>
+          <div class="w-[2rem] h-[2rem] cursor-pointer">
+            <img src="../icons/gif.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="flex items-center relative w-full">
+          <input type="text" class="w-full rounded-full bg-zinc-600 outline-non px-2 py-2 outline-none"/>
+          <img class="w-[2rem] h-[2rem] absolute top-[5px] right-[5px] cursor-pointer" src="../icons/emoji.svg" alt="" />
+        </div>
+
+        <div class="w-[4rem] h-[4rem] flex items-center cursor-pointer lg:w-[2.5rem] lg:h-[2.5rem]">
+          <img src="../icons/send.svg" alt="" />
+        </div>
+      </footer>
+    </main>
+
+    <script src="../script/index.js"></script>
+  </body>
+</html>
